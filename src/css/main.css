@@ -75,7 +75,7 @@ a:hover {
     background-attachment: fixed;
     background-size: cover;
     background-position: 75% 80%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 
     display: flex;
     justify-content: center;
@@ -94,6 +94,12 @@ a:hover {
 
 #slide_business-plan {
     background-image: url("../assets/images/Hintergrund_y.png");
+    flex-flow: column;
+    display: none;
+}
+
+#slide_dream {
+    background-image: url("../assets/images/Hintergrund_.png");
 }
 
 
@@ -120,8 +126,9 @@ a:hover {
 
 .rectangle_button {
     fill: rgba(255, 188, 0, 1);
-    position: absolute;
     overflow: visible;
+    width: 280px;
+    height: 80px;
 }
 
 #logo_middle {
@@ -143,25 +150,17 @@ a:hover {
     font-size: 30px;
 }
 
-#business-plan {
+#businessplan {
     line-height: 50px;
     text-align: center;
 
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
+    padding-bottom: 20px;
 }
 
-.Rechteck_1_ {
-    width: 1007px;
-    height: 581px;
-    position: absolute;
-    overflow: visible;
-    transform: translate(0px, -2px) matrix(1, 0, 0, 1, 460.9569, 233.3229) rotate(12deg);
-    transform-origin: center;
-}
-
-#Businessplan {
+#businessplan_button {
     overflow: visible;
     line-height: 50px;
     text-align: center;
@@ -169,53 +168,13 @@ a:hover {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-}
 
-#slide_3 {
     position: absolute;
-    width: 1920px;
-    height: 1281px;
-    left: 5970px;
-    top: 90px;
-    overflow: visible;
+    margin-top: 70px;
 }
 
-#Hintergrund_ {
-    opacity: 0.7;
-    position: absolute;
-    width: 1920px;
-    height: 1281px;
-    left: 0px;
-    top: 0px;
+#dream {
     overflow: visible;
-}
-
-#Rechteck_1_ba {
-    fill: transparent;
-    stroke: rgba(255, 255, 255, 1);
-    stroke-width: 5px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-
-.Rechteck_1_ba {
-    width: 1007px;
-    height: 581px;
-    position: absolute;
-    overflow: visible;
-    transform: translate(0px, 78px) matrix(1, 0, 0, 1, 460.9569, 233.3229) rotate(12deg);
-    transform-origin: center;
-}
-
-#Trumst_du_noch__oder_lebst_du_ {
-    left: 618px;
-    top: 602px;
-    position: absolute;
-    overflow: visible;
-    width: 685px;
-    height: 421px;
     line-height: 40px;
     margin-top: -5px;
     text-align: center;
@@ -223,7 +182,6 @@ a:hover {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-    color: rgba(34, 34, 34, 1);
     letter-spacing: -0.2px;
 }
 
@@ -251,8 +209,6 @@ a:hover {
     height: 30px;
     transition: all 0.6s ease-out;
     --web-animation: fadein 0.6s ease-out;
-    --web-action-type: page;
-    --web-action-target: Text_zum_Video . html;
     cursor: pointer;
     text-align: left;
 
@@ -271,8 +227,6 @@ a:hover {
     height: 30px;
     transition: all 0.6s ease-out;
     --web-animation: fadein 0.6s ease-out;
-    --web-action-type: page;
-    --web-action-target: Kontakt . html;
     cursor: pointer;
     text-align: left;
 
