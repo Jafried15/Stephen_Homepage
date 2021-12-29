@@ -1,0 +1,358 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url("../assets/fonts/Rajdhani/Rajdhani-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    color: #fff;
+    text-align: center;
+}
+
+a,
+a:hover {
+    color: #fff;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-item {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 25%;
+    text-transform: uppercase;
+}
+
+.navbar-item img {
+    max-height: 105px;
+}
+
+#Startseite {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#slideshow {
+    mix-blend-mode: normal;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 75% 80%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide_home {
+    background-image: url("../assets/images/Hintergrund.png");
+    display: none;
+}
+
+#slide_concept {
+    background-color: #222222;
+    display: none;
+}
+
+#slide_business-plan {
+    background-image: url("../assets/images/Hintergrund_y.png");
+}
+
+
+.text-center {
+    width: 50%;
+}
+
+.rectangle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: visible;
+    transform: rotate(12deg);
+    transform-origin: center;
+
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.rectangle_button {
+    fill: rgba(255, 188, 0, 1);
+    position: absolute;
+    overflow: visible;
+}
+
+#logo_middle {
+    overflow: visible;
+}
+
+#concept {
+    line-height: 35px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.title_concept {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#business-plan {
+    line-height: 50px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Rechteck_1_ {
+    width: 1007px;
+    height: 581px;
+    position: absolute;
+    overflow: visible;
+    transform: translate(0px, -2px) matrix(1, 0, 0, 1, 460.9569, 233.3229) rotate(12deg);
+    transform-origin: center;
+}
+
+#Businessplan {
+    overflow: visible;
+    line-height: 50px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#slide_3 {
+    position: absolute;
+    width: 1920px;
+    height: 1281px;
+    left: 5970px;
+    top: 90px;
+    overflow: visible;
+}
+
+#Hintergrund_ {
+    opacity: 0.7;
+    position: absolute;
+    width: 1920px;
+    height: 1281px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rechteck_1_ba {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rechteck_1_ba {
+    width: 1007px;
+    height: 581px;
+    position: absolute;
+    overflow: visible;
+    transform: translate(0px, 78px) matrix(1, 0, 0, 1, 460.9569, 233.3229) rotate(12deg);
+    transform-origin: center;
+}
+
+#Trumst_du_noch__oder_lebst_du_ {
+    left: 618px;
+    top: 602px;
+    position: absolute;
+    overflow: visible;
+    width: 685px;
+    height: 421px;
+    line-height: 40px;
+    margin-top: -5px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(34, 34, 34, 1);
+    letter-spacing: -0.2px;
+}
+
+#Home {
+    left: 1345px;
+    top: 84px;
+    position: absolute;
+    overflow: visible;
+    width: 102px;
+    height: 30px;
+    text-align: left;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#Business_ {
+    left: 1511px;
+    top: 84px;
+    position: absolute;
+    overflow: visible;
+    width: 139px;
+    height: 30px;
+    transition: all 0.6s ease-out;
+    --web-animation: fadein 0.6s ease-out;
+    --web-action-type: page;
+    --web-action-target: Text_zum_Video . html;
+    cursor: pointer;
+    text-align: left;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#Kontakt {
+    left: 1714px;
+    top: 84px;
+    position: absolute;
+    overflow: visible;
+    width: 139px;
+    height: 30px;
+    transition: all 0.6s ease-out;
+    --web-animation: fadein 0.6s ease-out;
+    --web-action-type: page;
+    --web-action-target: Kontakt . html;
+    cursor: pointer;
+    text-align: left;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#Logo_Ideen_Stephen2 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 46px;
+    top: 41px;
+    overflow: visible;
+}
+
+.ellipses {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse {
+    overflow: visible;
+    width: 15px;
+    height: 15px;
+    padding-right: 50px;
+
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 4px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    transition: all 0.6s ease-out;
+    --web-animation: fadein 0.6s ease-out;
+    cursor: pointer;
+}
+
+.ellipse.active {
+    overflow: visible;
+    fill: transparent;
+    stroke: rgba(255, 188, 0, 1);
+    stroke-width: 6px;
+    transform: scale(1.75);
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    padding: 0 3rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media {
+    width: 48px;
+    height: 48px;
+    overflow: visible;
+    margin-right: 2rem;
+}
+
+#Impressum__Datenschutz {
+    overflow: visible;
+    width: 214px;
+    --web-animation: fadein 0.3s ease-out;
+    cursor: pointer;
+    text-align: right;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+}
