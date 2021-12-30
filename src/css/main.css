@@ -10,13 +10,7 @@
     border: none;
 }
 
-html {
-}
-
 body {
-    width: 100vw;
-    height: 100vh;
-
     color: #fff;
     text-align: center;
 }
@@ -42,7 +36,8 @@ a:hover {
     max-height: 105px;
 }
 
-#Startseite {
+#site_home,
+#site_concept {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -65,7 +60,7 @@ a:hover {
     overflow: hidden;
 }
 
-.slide {
+.content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -87,9 +82,14 @@ a:hover {
     display: none;
 }
 
-#slide_concept {
+#slide_concept,
+#content_concept {
     background-color: #222222;
+}
+
+#slide_concept {
     display: none;
+
 }
 
 #slide_business-plan {
@@ -185,73 +185,19 @@ a:hover {
     letter-spacing: -0.2px;
 }
 
-#Home {
-    left: 1345px;
-    top: 84px;
-    position: absolute;
-    overflow: visible;
-    width: 102px;
-    height: 30px;
-    text-align: left;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 1);
-}
-
-#Business_ {
-    left: 1511px;
-    top: 84px;
-    position: absolute;
-    overflow: visible;
-    width: 139px;
-    height: 30px;
-    transition: all 0.6s ease-out;
-    --web-animation: fadein 0.6s ease-out;
-    cursor: pointer;
-    text-align: left;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 1);
-}
-
-#Kontakt {
-    left: 1714px;
-    top: 84px;
-    position: absolute;
-    overflow: visible;
-    width: 139px;
-    height: 30px;
-    transition: all 0.6s ease-out;
-    --web-animation: fadein 0.6s ease-out;
-    cursor: pointer;
-    text-align: left;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 1);
-}
-
-#Logo_Ideen_Stephen2 {
-    position: absolute;
-    width: 105px;
-    height: 105px;
-    left: 46px;
-    top: 41px;
-    overflow: visible;
-}
-
-.ellipses {
+.ellipses,
+.video_button {
     position: absolute;
     width: 100%;
     top: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video_button {
+    flex-flow: column;
+    top: 75%;
 }
 
 .ellipse {
@@ -278,6 +224,29 @@ a:hover {
     stroke: rgba(255, 188, 0, 1);
     stroke-width: 6px;
     transform: scale(1.75);
+}
+
+.polygon {
+    fill: transparent;
+    stroke: rgba(255, 188, 0, 1);
+    stroke-width: 3px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    overflow: visible;
+    width: 89px;
+    height: 47px;
+    transform: rotate(180deg);
+}
+
+#businessplan_video {
+    overflow: visible;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255, 188, 0, 1);
 }
 
 .footer {
