@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de" class="has-navbar-fixed-top">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+
+        <title>Startseite</title>
+    </head>
+    <body>
+        <nav class="navbar is-transparent is-fixed-top">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img id="logo" src="../assets/logos/Logo_Ideen_Stephen2.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="sites/concept.html">
+                        Business
+                    </a>
+                    <a class="navbar-item" href="sites/contact.html">
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="site" id="site_home">
+            <section class="hero is-fullheight">
+                <div class="slider">
+                    <div class="slide fade" data-stellar-background-ratio="0.5" [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+                        <div class="slide-content">
+                            <h1 class="title is-1" [innerHTML]="slide.title"></h1>
+                            <p class="subtitle is-4">{{slide.subtitle}}</p>
+                            <p class="is-6" *ngIf="slide.description">{{slide.description}}</p>
+                            <button *ngIf="slide.route" [routerLink]="[slide.route]" class="labeled-icon button is-info mt-5 is-outlined">
+                                Mehr erfahren
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </button>
+                            <a *ngIf="slide.url" [href]="slide.url" target="_blank" class="labeled-icon button is-info mt-5 is-outlined">
+                                Zur alten Webseite
+                                <ion-icon name="arrow-redo-outline" class="pl-2"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    \
+                    <div class="arrows">
+                        <a class="arrow prev" (click)="plusSlides(-1)">&#10094;</a>
+                        <a class="arrow next" (click)="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="dots">
+                        <span class="dot" (click)="currentSlide(i + 1)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero is-fullheight has-carousel">
+                <div id="carousel" class="hero-carousel">
+                    <div class="item-1">
+                        <div class="content" id="slide_home">
+                            <svg class="rectangle">
+                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                            </svg>
+
+                            <img id="logo_middle" src="../assets/logos/Logo_Ideen_Stephen4.png" alt="logo">
+                        </div>
+                    </div>
+                    <div class="item-2">
+                        <div class="content" id="slide_concept">
+                            <div class="text-center" id="concept">
+                        <span class="title_slide">
+                            Hey! Mega cool, dass du hier bist!
+                        </span>
+                                <br />
+                                <span>
+                            <br />
+                            Was wäre, wenn ich dir ein Konzept vorstelle, dass dir ein ortsunabhängiges Einkommen einbringt und dir einen Weg aus dem Hamsterrad "Leben" bzw. "Tausche Arbeitszeit gegen Geld"- aufzeigt. Habe ich dann deine volle Aufmerksamkeit?<br /><br />Hier unten findest du ein Video, welches ich in Zusammenarbeit mit meinem Team für dich aufgenommen habe. Darin erfährst du, wie das Geschäft grundsätzlich funktioniert und wie auch du es schaffst, dir ein zweites Standbein aufzubauen, für das du nicht mehr dein ganzes Leben lang 40-50 Stunden in der Woche arbeiten musst.
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-3">
+                        <div class="content" id="slide_business-plan">
+                            <svg class="rectangle">
+                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                            </svg>
+
+                            <div id="businessplan">
+                                <span>Hier geht's zum</span>
+                            </div>
+
+                            <a class="button_primary button_text" id="businessplan_button" href="sites/concept.html">
+                                Businessplan
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-4">
+                        <div class="content" id="slide_dream">
+                            <svg class="rectangle">
+                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                            </svg>
+                            <div id="dream">
+                                <span>Träumst du noch, <br />oder lebst du schon? </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-body"></div>
+                <div class="hero-foot">
+                </div>
+            </section>
+
+            <script>
+                bulmaCarousel.attach('#carousel', {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                });
+            </script>
+
+            <div class="footer">
+                <div>
+                    <img class="social-media" id="Instagram_weiss" src="../assets/logos/Instagram_weiss.png" alt="Instagram">
+                    <img class="social-media" id="Facebook_weiss" src="../assets/logos/Facebook_weiss.png" alt="Facebook">
+                </div>
+
+                <div id="Impressum__Datenschutz">
+                    <a>Impressum & Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

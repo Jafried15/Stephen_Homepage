@@ -28,16 +28,23 @@ a:hover {
     color: #fff;
     font-size: 30px;
     font-weight: bold;
-    padding-right: 25%;
+    margin: 0.5rem 25% 0.5rem 0.75rem;
     text-transform: uppercase;
+    padding: 0;
+}
+
+.navbar-item:hover,
+.navbar-item:active,
+.navbar-item:focus-within {
+    background-color: transparent !important;
+    color: #fff !important;
 }
 
 .navbar-item img {
     max-height: 105px;
 }
 
-#site_home,
-#site_concept {
+.site {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -77,9 +84,10 @@ a:hover {
     align-items: center;
 }
 
-#slide_home {
+#slide_home,
+#slide_thanks,
+#slide_impress_legacy {
     background-image: url("../assets/images/Hintergrund.png");
-    display: none;
 }
 
 #slide_concept,
@@ -87,21 +95,19 @@ a:hover {
     background-color: #222222;
 }
 
-#slide_concept {
-    display: none;
-
-}
-
 #slide_business-plan {
     background-image: url("../assets/images/Hintergrund_y.png");
-    flex-flow: column;
-    display: none;
 }
 
 #slide_dream {
     background-image: url("../assets/images/Hintergrund_.png");
+    display: none;
 }
 
+#slide_business-plan,
+#slide_impress_legacy {
+    flex-flow: column;
+}
 
 .text-center {
     width: 50%;
@@ -124,11 +130,21 @@ a:hover {
     shape-rendering: auto;
 }
 
-.rectangle_button {
-    fill: rgba(255, 188, 0, 1);
-    overflow: visible;
-    width: 280px;
-    height: 80px;
+.button_primary {
+    background-color: rgba(255, 188, 0, 1);
+    padding: 10px 35px;
+    color: inherit;
+    border-radius: 18px;
+    z-index: 10;
+}
+
+.rectangle_button.transparent {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 3px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
 }
 
 #logo_middle {
@@ -144,13 +160,14 @@ a:hover {
     font-size: 20px;
 }
 
-.title_concept {
+.title_slide {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
 }
 
-#businessplan {
+#businessplan,
+#impress_legacy {
     line-height: 50px;
     text-align: center;
 
@@ -160,7 +177,7 @@ a:hover {
     padding-bottom: 20px;
 }
 
-#businessplan_button {
+.button_text {
     overflow: visible;
     line-height: 50px;
     text-align: center;
@@ -168,9 +185,17 @@ a:hover {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
+}
 
-    position: absolute;
-    margin-top: 70px;
+.imp_leg_buttons,
+.imp_leg_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#businessplan_button {
+
 }
 
 #dream {
