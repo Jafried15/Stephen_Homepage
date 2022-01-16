@@ -6,12 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
         <link rel="stylesheet" href="../css/main.css">
-
-        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-        <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
 
         <title>Startseite</title>
     </head>
@@ -41,94 +36,69 @@
         <div class="site" id="site_home">
             <section class="hero is-fullheight">
                 <div class="slider">
-                    <div class="slide fade" data-stellar-background-ratio="0.5" [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+                    <div class="slide fade" data-stellar-background-ratio="0.5" id="slide_home">
                         <div class="slide-content">
-                            <h1 class="title is-1" [innerHTML]="slide.title"></h1>
-                            <p class="subtitle is-4">{{slide.subtitle}}</p>
-                            <p class="is-6" *ngIf="slide.description">{{slide.description}}</p>
-                            <button *ngIf="slide.route" [routerLink]="[slide.route]" class="labeled-icon button is-info mt-5 is-outlined">
-                                Mehr erfahren
-                                <ion-icon name="chevron-forward-outline"></ion-icon>
-                            </button>
-                            <a *ngIf="slide.url" [href]="slide.url" target="_blank" class="labeled-icon button is-info mt-5 is-outlined">
-                                Zur alten Webseite
-                                <ion-icon name="arrow-redo-outline" class="pl-2"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                    \
-                    <div class="arrows">
-                        <a class="arrow prev" (click)="plusSlides(-1)">&#10094;</a>
-                        <a class="arrow next" (click)="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <div class="dots">
-                        <span class="dot" (click)="currentSlide(i + 1)"></span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hero is-fullheight has-carousel">
-                <div id="carousel" class="hero-carousel">
-                    <div class="item-1">
-                        <div class="content" id="slide_home">
                             <svg class="rectangle">
-                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                                <rect rx="72" ry="72" width="100%" height="100%"></rect>
                             </svg>
 
                             <img id="logo_middle" src="../assets/logos/Logo_Ideen_Stephen4.png" alt="logo">
                         </div>
                     </div>
-                    <div class="item-2">
-                        <div class="content" id="slide_concept">
+                    <div class="slide fade" data-stellar-background-ratio="0.5" id="slide_concept">
+                        <div class="slide-content">
                             <div class="text-center" id="concept">
-                        <span class="title_slide">
-                            Hey! Mega cool, dass du hier bist!
-                        </span>
-                                <br />
-                                <span>
-                            <br />
-                            Was wäre, wenn ich dir ein Konzept vorstelle, dass dir ein ortsunabhängiges Einkommen einbringt und dir einen Weg aus dem Hamsterrad "Leben" bzw. "Tausche Arbeitszeit gegen Geld"- aufzeigt. Habe ich dann deine volle Aufmerksamkeit?<br /><br />Hier unten findest du ein Video, welches ich in Zusammenarbeit mit meinem Team für dich aufgenommen habe. Darin erfährst du, wie das Geschäft grundsätzlich funktioniert und wie auch du es schaffst, dir ein zweites Standbein aufzubauen, für das du nicht mehr dein ganzes Leben lang 40-50 Stunden in der Woche arbeiten musst.
-                        </span>
+                                <p class="title_slide">
+                                    Hey! Mega cool, dass du hier bist!
+                                </p>
+
+                                <p>
+                                    Was wäre, wenn ich dir ein Konzept vorstelle, dass dir ein ortsunabhängiges Einkommen einbringt und dir einen Weg aus dem Hamsterrad "Leben" bzw. "Tausche Arbeitszeit gegen Geld"- aufzeigt. Habe ich dann deine volle Aufmerksamkeit?<br /><br />Hier unten findest du
+                                    ein Video, welches ich in Zusammenarbeit mit meinem Team für dich aufgenommen habe. Darin erfährst du, wie das Geschäft grundsätzlich funktioniert und wie auch du es schaffst, dir ein zweites Standbein aufzubauen, für das du nicht mehr dein ganzes Leben lang 40-50
+                                    Stunden in der Woche arbeiten musst.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="item-3">
-                        <div class="content" id="slide_business-plan">
+                    <div class="slide fade" data-stellar-background-ratio="0.5" id="slide_business-plan">
+                        <div class="slide-content">
                             <svg class="rectangle">
-                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                                <rect rx="72" ry="72" width="100%" height="100%"></rect>
                             </svg>
 
-                            <div id="businessplan">
-                                <span>Hier geht's zum</span>
-                            </div>
+                            <p class="title_slide">
+                                Hier geht's zum
+                            </p>
 
                             <a class="button_primary button_text" id="businessplan_button" href="sites/concept.html">
                                 Businessplan
                             </a>
                         </div>
                     </div>
-                    <div class="item-4">
-                        <div class="content" id="slide_dream">
+                    <div class="slide fade" data-stellar-background-ratio="0.5" id="slide_dream">
+                        <div class="slide-content">
                             <svg class="rectangle">
-                                <rect rx="72" ry="72" x="25%" y="23%" width="50%" height="54%"></rect>
+                                <rect rx="72" ry="72" width="100%" height="100%"></rect>
                             </svg>
-                            <div id="dream">
+
+                            <p class="title_slide">
                                 <span>Träumst du noch, <br />oder lebst du schon? </span>
-                            </div>
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="hero-body"></div>
-                <div class="hero-foot">
+
+                    <div class="arrows">
+                        <a class="arrow prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="arrow next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
                 </div>
             </section>
-
-            <script>
-                bulmaCarousel.attach('#carousel', {
-                    slidesToScroll: 1,
-                    slidesToShow: 1,
-                });
-            </script>
 
             <div class="footer">
                 <div>
@@ -141,5 +111,8 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
     </body>
 </html>
