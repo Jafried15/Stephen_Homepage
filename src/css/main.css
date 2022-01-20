@@ -77,6 +77,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
 }
 
 .content.bg-grey {
@@ -335,6 +336,10 @@ a:hover {
 .concept-video {
     width: 75%;
     height: 70%;
+}
+
+#contact_button {
+    margin-top: 30px;
 }
 
 .title_slide {
