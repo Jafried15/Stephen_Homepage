@@ -10,7 +10,7 @@
 
         <link rel="icon" type="image/x-icon" href="../../assets/logos/Logo_Ideen_Stephen2.png">
 
-        <title>Kontakt</title>
+        <title>Gesprächstermin</title>
     </head>
     <body>
         <nav class="navbar is-transparent is-fixed-top">
@@ -28,48 +28,54 @@
                     <a class="navbar-item" href="concept.html">
                         Business
                     </a>
-                    <a class="navbar-item" href="">
+                    <a class="navbar-item" href="contact.html">
                         Kontakt
                     </a>
                 </div>
             </div>
         </nav>
 
-        <div class="article" id="site_contact">
-            <div class="content bg-grey" id="content_contact">
-                <div class="text-center" id="contact">
+        <div class="article" id="site_appointment">
+            <div class="content bg-grey" id="content_appointment">
+                <div class="text-center" id="appointment">
                     <span class="title_slide">
-                        Kontaktformular
-                    </span>
-                    <br />
-                    <span>
-                    <br />
-                       Vereinbare einen persönlichen Termin mit mir und wir schauen gemeinsam, wie du dein eigenes Geschäft starten kannst
+                        Gesprächstermin
                     </span>
                 </div>
 
-                <form action="../../php/contact.php" method="post" class="pt-6 contact-form">
-                    <div class="columns">
-                        <div class="field column">
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Vorname" id="surname" required>
-                            </div>
+                <form action="../../php/appointment.php" method="post" class="pt-6 contact-form">
+                    <div class="field columns is-grouped is-justify-content-center">
+                        <input id="hiddenMethod" name="method" type="hidden">
+                        <div class="control column method">
+                            <a class="button active" id="zoom" onclick="changeMethod('zoom')">Zoom</a>
                         </div>
-                        <div class="field column">
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Nachname" id="lastname" required>
-                            </div>
+                        <div class="control column method">
+                            <a class="button" id="skype" onclick="changeMethod('skype')">Skype</a>
+                        </div>
+                        <div class="control column method">
+                            <a class="button" id="phone" onclick="changeMethod('phone')">Telefon</a>
+                        </div>
+                        <div class="control column method">
+                            <a class="button" id="facetime" onclick="changeMethod('facetime')">Facetime</a>
                         </div>
                     </div>
-                    <div class="columns">
-                        <div class="field column">
+                    <div class="columns pt-3">
+                        <div class="column appointment1 text-center">
+                            Wunschtermin 1
                             <div class="control">
-                                <input class="input" type="tel" placeholder="Telefonnummer" id="tel" required>
+                                <input class="input" type="date" placeholder="Datum" id="date1" name="date1">
+                            </div>
+                            <div class="control">
+                                <input class="input" type="time" placeholder="Uhrzeit" id="time1" name="time1">
                             </div>
                         </div>
-                        <div class="field column">
+                        <div class="column appointment2 text-center">
+                            Wunschtermin 2
                             <div class="control">
-                                <input class="input" type="email" placeholder="Email" id="email" required>
+                                <input class="input" type="date" placeholder="Datum" id="date2" name="date2">
+                            </div>
+                            <div class="control">
+                                <input class="input" type="time" placeholder="Uhrzeit" id="time2" name="time2">
                             </div>
                         </div>
                     </div>
@@ -91,5 +97,8 @@
                 <a href="liability_privacy.html">Impressum & Datenschutz</a>
             </div>
         </div>
+
+        <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../../js/main.js"></script>
     </body>
 </html>
