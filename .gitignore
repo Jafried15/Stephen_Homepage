@@ -12,3 +12,7 @@
 # System files
 .DS_Store
 Thumbs.db
+.DS_Store
+.idea/Stephen_Homepage.iml
+src/.DS_Store
+src/assets/.DS_Store
