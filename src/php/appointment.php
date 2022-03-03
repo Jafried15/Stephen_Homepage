@@ -19,15 +19,13 @@ if (isset($_POST['method']) && isset($_POST['date1']) && isset($_POST['time1']) 
     );
 }
 
-$contact = $_SESSION['contact'];
+$contact = json_decode($_SESSION['contact']);
 
-
-$to = 'work@joelfriedrich.de';
-
+$to = 'info@team-wanitschek.de';
 $subject = "Terminanfrage";
 
 $message = "Kontakt: " . $contact;
-$message = +"Termin: " . $appointment;
+$message .= "Termin: " . $appointment;
 
 $success = mail($to, $subject, $message);
 
