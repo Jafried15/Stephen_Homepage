@@ -20,4 +20,4 @@ if (isset($_POST['surname']) && isset($_POST['lastname']) && isset($_POST['tel']
 
 $_SESSION['contact'] = json_encode($contact);
 
-header('Location: ../app/sites/appointment.html');
+header('Location: ../sites/appointment.html');

@@ -30,7 +30,7 @@ $message .= "Termin: " . $appointment;
 $success = mail($to, $subject, $message);
 
 if ($success) {
-    header('Location: ../app/sites/thanks.html');
+    header('Location: ../sites/thanks.html');
 } else {
     echo error_get_last()['message'];
 }
