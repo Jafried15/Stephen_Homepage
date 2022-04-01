@@ -25,6 +25,9 @@ body {
     font-family: BourtonLineMedium;
 }
 
+html.has-navbar-fixed-top {
+    padding-top: 0;
+}
 
 a,
 a:hover {
@@ -94,7 +97,7 @@ button,
     transform: translateY(-8px) rotate(-45deg);
 }
 
-.site {
+.site_home {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -102,9 +105,16 @@ button,
     top: 0;
 }
 
+.site {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
 .content {
     width: 100%;
-    height: 100%;
     overflow: visible;
 
     background-repeat: no-repeat;
@@ -121,25 +131,16 @@ button,
 .content.bg-grey {
     background-color: #222222;
     opacity: 0.9;
+    background-position: 100% 100%;
 }
 
 .article {
-    position: absolute;
     width: 100%;
-    height: 100%;
     overflow: hidden;
-}
-
-.article:nth-of-type(1) {
-    top: 0;
-}
-
-.article:nth-of-type(2) {
-    top: 100%;
-}
-
-.article:nth-of-type(3) {
-    top: 200%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .article.flex {
@@ -380,7 +381,6 @@ button,
 }
 
 .video-button {
-    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -569,16 +569,34 @@ button,
     color: rgba(255, 255, 255, 1);
 }
 
+@media screen and (max-width: 1023px) {
+    .navbar-menu {
+        background-color: #bcbcbc;
+    }
+}
 
 @media only screen and (max-width: 768px) {
+    .article:nth-of-type(1) {
+        height: auto;
+        margin-top: 25%;
+    }
+
     /* For mobile phones: */
     .navbar-item {
         margin: 0.5rem 0.75rem;
     }
 
+    .slide-content {
+        margin-bottom: 20%;
+    }
+
+    .arrow {
+        top: 45%;
+    }
+
     .rectangle {
-        width: 75%;
-        height: 40%;
+        width: 80%;
+        height: 50%;
     }
 
     #logo_middle {
@@ -586,7 +604,7 @@ button,
     }
 
     .dots {
-        bottom: 15%;
+        bottom: 20%;
     }
 
     .text-center {
@@ -600,6 +618,15 @@ button,
 
     .footer.columns {
         margin: 0;
+    }
+
+    #site_contact,
+    #site_appointment {
+        margin-bottom: 25%;
+    }
+
+    .contact-form .columns {
+        flex-direction: column;
     }
 
     #social-media-icons,
@@ -621,5 +648,20 @@ button,
 
     #liability_privacy {
         font-size: 20px;
+    }
+
+    .liability,
+    .privacy {
+        margin: 25% 0;
+    }
+
+    .liability .content,
+    .privacy .content {
+        width: 85%;
+    }
+
+    #liability,
+    #privacy {
+        width: 100%;
     }
 }
